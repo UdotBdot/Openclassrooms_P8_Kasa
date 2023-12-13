@@ -5,13 +5,13 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 function ListAbout(props) {
   return (
     <li className="accordion__li">
-      <input type="checkbox" name="accordion" id={`accordion-${props.title}`} />
+      <input type="checkbox" name="accordion" id={`accordion-${props.collapseTitle}`} />
       <div className="accordion__title">
-        <label htmlFor={`accordion-${props.title}`}>{props.title}</label>
+        <label htmlFor={`accordion-${props.collapseTitle}`}>{props.collapseTitle}</label>
         <FontAwesomeIcon icon={faChevronUp} className="accordion__icon" />
       </div>
       <div className="accordion__content">
-        <p>{props.content}</p>
+        <p>{props.collapseContent}</p>
       </div>
     </li>
   );
