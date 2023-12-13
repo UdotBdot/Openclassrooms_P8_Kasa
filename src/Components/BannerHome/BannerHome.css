@@ -1,0 +1,20 @@
+.Banner {
+  position: relative;
+  margin: 45px 100px;
+}
+.Banner__img {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.Banner__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+}/*# sourceMappingURL=BannerHome.css.map */

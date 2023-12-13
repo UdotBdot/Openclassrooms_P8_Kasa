@@ -1,0 +1,45 @@
+.accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion input[type=checkbox] {
+  display: none;
+}
+.accordion__ul {
+  max-width: 1023px;
+  list-style-type: none;
+}
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.accordion__icon {
+  transition: transform 0.3s ease;
+}
+.accordion__content {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: transparent;
+  color: #ff6060;
+  padding: 15px;
+  margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+}
+.accordion input[type=checkbox]:checked + .accordion__title + .accordion__content {
+  max-height: 500px;
+  background-color: #f6f6f6;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+}
+.accordion input[type=checkbox]:checked ~ .accordion__title .accordion__icon {
+  transform: rotate(-180deg);
+}/*# sourceMappingURL=AboutCollapse.css.map */

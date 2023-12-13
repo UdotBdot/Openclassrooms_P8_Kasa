@@ -1,0 +1,113 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+* body {
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  margin: 45px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar__img {
+  width: 210px;
+  height: 68px;
+}
+.Navbar__side {
+  display: flex;
+  gap: 37px;
+}
+.Navbar__side a {
+  text-decoration: none;
+  color: #ff6060;
+}
+.Navbar__side--link {
+  font-size: 24px;
+  color: #ff6060;
+}
+.Navbar__side--link:hover {
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.Banner {
+  position: relative;
+  margin: 45px 100px;
+}
+.Banner__img {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.Banner__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+}
+
+.footer {
+  display: column;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  padding: 66px 0 30px 0;
+}
+.footer p {
+  color: white;
+  font-size: 20px;
+}
+
+.accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion input[type=checkbox] {
+  display: none;
+}
+.accordion__ul {
+  max-width: 1023px;
+  list-style-type: none;
+}
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.accordion__icon {
+  transition: transform 0.3s ease;
+}
+.accordion__content {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: transparent;
+  color: #ff6060;
+  padding: 15px;
+  margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+}
+.accordion input[type=checkbox]:checked + .accordion__title + .accordion__content {
+  max-height: 500px;
+  background-color: #f6f6f6;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+}
+.accordion input[type=checkbox]:checked ~ .accordion__title .accordion__icon {
+  transform: rotate(-180deg);
+}/*# sourceMappingURL=main.css.map */
