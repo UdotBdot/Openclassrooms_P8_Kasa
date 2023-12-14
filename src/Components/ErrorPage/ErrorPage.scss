@@ -1,0 +1,29 @@
+@import "../../Styles/Utils/variables";
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    &__number {
+        font-weight: bold;
+        font-size: 288px;
+        margin: 10px 0;
+        color: $primary-color;
+    }
+    &__content {
+        font-size: 36px;
+        color: $primary-color;
+    }
+    &__link {
+        font-size: 18px;
+        text-decoration: none;
+        color: $primary-color;
+        margin-bottom: 100px;
+        &:hover {
+            border-bottom: 2px solid $primary-color;
+        }
+    }
+}

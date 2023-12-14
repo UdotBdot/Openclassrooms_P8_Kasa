@@ -3,6 +3,7 @@
 @import "../Components/Footer/Footer.css";
 @import "../Components/AboutCollapse/AboutCollapse.css";
 @import "../Components/Gallery/Gallery.css";
+@import "../Components/ErrorPage/ErrorPage.css";
 * {
   font-family: "Montserrat", sans-serif;
 }

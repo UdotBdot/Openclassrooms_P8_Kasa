@@ -1,3 +1,6 @@
+@import "../../Styles/Utils/mixins";
+@import "../../Styles/Utils/variables";
+
 .gallery {
   @include custom-margin;
   background: $secondary-color;
@@ -13,7 +16,7 @@
     min-height: 340px;
     transition: transform 0.2s ease-in-out;
     &:hover {
-      transform: scale(1.1); // Effet de zoom au survol
+      transform: scale(1.1); 
       opacity: 0.9;
     }
 
