@@ -1,6 +1,6 @@
 .gallery {
-  margin: 45px 100px;
-  background: #f6f6f6;
+  @include custom-margin;
+  background: $secondary-color;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

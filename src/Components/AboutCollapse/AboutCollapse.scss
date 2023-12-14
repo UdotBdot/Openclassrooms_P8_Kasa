@@ -12,7 +12,7 @@
   &__title {
     display: flex;
     justify-content: space-between;
-    background-color: #ff6060;
+    background-color: $primary-color;
     color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -21,27 +21,28 @@
     cursor: pointer;
   }
   &__icon {
-    transition: transform 0.3s ease; // Ajoutez une transition pour la rotation de l'icône
+    transition: transform 0.4s ease-in-out;
   }
   &__content {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: transparent;
-    color: #ff6060;
+    color: $primary-color;
     padding: 15px;
     margin-bottom: 15px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.6s ease-out, opacity 0.6s ease;
+    transition: max-height 0.4s ease-in-out, background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
   }
   input[type="checkbox"]:checked + .accordion__title + .accordion__content {
     max-height: 500px;
-    background-color: #f6f6f6;
-    transition: max-height 0.6s ease-out, opacity 0.6s ease;
+    background-color: $secondary-color;
+    opacity: 1;
   }
   input[type="checkbox"]:checked ~ .accordion__title .accordion__icon {
     transform: rotate(
       -180deg
-    ); // Effectuez une rotation de 180 degrés lorsque la case à cocher est cochée
+    ); 
   }
 }

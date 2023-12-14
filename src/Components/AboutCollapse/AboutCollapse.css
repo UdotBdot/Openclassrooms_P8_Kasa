@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 .accordion__icon {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease-in-out;
 }
 .accordion__content {
   border-bottom-left-radius: 5px;
@@ -33,12 +33,13 @@
   margin-bottom: 15px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+  transition: max-height 0.4s ease-in-out, background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
 }
 .accordion input[type=checkbox]:checked + .accordion__title + .accordion__content {
   max-height: 500px;
   background-color: #f6f6f6;
-  transition: max-height 0.6s ease-out, opacity 0.6s ease;
+  opacity: 1;
 }
 .accordion input[type=checkbox]:checked ~ .accordion__title .accordion__icon {
   transform: rotate(-180deg);
