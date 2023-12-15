@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="Navbar">
+      <Link to="/">
       <img
-        src="./images/LOGO.PNG"
+        src="../images/LOGO.PNG"
         alt="LOGO KASA"
         className="Navbar__img"
       ></img>
+      </Link>
       <div className="Navbar__side">
         <div className="Navbar__side--link">
           <Link to="/">Accueil</Link>
