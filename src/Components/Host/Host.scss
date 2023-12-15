@@ -1,0 +1,14 @@
+.host {
+    display: flex;
+    margin: 45px 100px 10px 100px;
+    &__name {
+        color: #FF6060;
+        text-align: right;
+        padding: 5px;
+    }
+    &__img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}
