@@ -38,4 +38,9 @@
     padding: 10px;
     text-shadow: 2px 2px 15px #000000;
   }
+  @media screen and (max-width: 426px) {
+    @include custom-margin-mobile(0px);
+    padding: 5px;
+    background: transparent;
+  }
 }

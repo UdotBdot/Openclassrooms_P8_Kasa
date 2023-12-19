@@ -1,7 +1,11 @@
 @import "../../Styles/Utils/variables";
+@import "../../Styles/Utils/mixins";
 
 .about__container {
   margin: 0 100px;
+  @media screen and (max-width: 426px) {
+    @include custom-margin-mobile
+  }
 }
 
 .accordion {
@@ -50,5 +54,11 @@
     transform: rotate(
       -180deg
     ); 
+  }
+  @media screen and (max-width: 426px) {
+    .accordion__content {
+      padding: 5px;
+      margin-bottom: 0px;
+    }
   }
 }

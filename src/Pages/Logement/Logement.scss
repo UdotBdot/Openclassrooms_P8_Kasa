@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media screen and (max-width: 426px) {
+        flex-direction: column;
+      }
 }
 
 .container2 {
@@ -9,8 +12,21 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    @media screen and (max-width: 426px) {
+        flex-direction: column;;
+        margin: 20px;
+    }
     &__collapse  {
         width: 100% ;
+    }
+}
+
+.mobile-responsive {
+    @media screen and (max-width: 426px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 20px;
     }
 }
 

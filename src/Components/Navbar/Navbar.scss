@@ -1,26 +1,46 @@
+@import "../../Styles/Utils/mixins";
+@import "../../Styles/Utils/variables";
+
 .Navbar {
   @include custom-margin;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   &__img {
     width: 210px;
     height: 68px;
   }
+
   &__side {
     display: flex;
     gap: 37px;
+    
     a {
       text-decoration: none;
       color: $primary-color;
     }
+
     &--link {
       font-size: 24px;
       color: $primary-color;
+
       &:hover {
         border-bottom: 1px solid;
         cursor: pointer;
       }
+    }
+  }
+
+  // Media query pour les écrans plus petits
+  @media screen and (max-width: 426px) {
+    @include custom-margin-mobile;
+    .Navbar__img {
+      width: 145px;
+      height: 47px;
+    }
+    .Navbar__side--link {
+      font-size: 12px;
     }
   }
 }

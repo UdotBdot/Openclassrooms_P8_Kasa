@@ -37,7 +37,7 @@ function Logement() {
           <Title flatId={flatId} />
           <Tags flatId={flatId} />
         </div>
-        <div>
+        <div className="mobile-responsive">
           <Host flatId={flatId} />
           <Rate flatId={flatId} />
         </div>

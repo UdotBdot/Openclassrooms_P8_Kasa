@@ -6,8 +6,7 @@
   position: relative;
   width: 100%;
   height: 223px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 25px;
 }
 .Banner__text {
@@ -17,4 +16,16 @@
   transform: translate(-50%, -50%);
   color: white;
   font-size: 40px;
+}
+@media screen and (max-width: 426px) {
+  .Banner {
+    margin: 20px;
+  }
+  .Banner .Banner__img {
+    width: 100%;
+    height: 110px;
+  }
+  .Banner .Banner__text {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=BannerHome.css.map */

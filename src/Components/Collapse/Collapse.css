@@ -1,6 +1,11 @@
 .about__container {
   margin: 0 100px;
 }
+@media screen and (max-width: 426px) {
+  .about__container {
+    margin: 20px;
+  }
+}
 
 .accordion {
   display: flex;
@@ -47,4 +52,10 @@
 }
 .accordion input[type=checkbox]:checked ~ .accordion__title .accordion__icon {
   transform: rotate(-180deg);
+}
+@media screen and (max-width: 426px) {
+  .accordion .accordion__content {
+    padding: 5px;
+    margin-bottom: 0px;
+  }
 }/*# sourceMappingURL=Collapse.css.map */

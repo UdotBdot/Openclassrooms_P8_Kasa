@@ -23,4 +23,16 @@
 .Navbar__side--link:hover {
   border-bottom: 1px solid;
   cursor: pointer;
+}
+@media screen and (max-width: 426px) {
+  .Navbar {
+    margin: 20px;
+  }
+  .Navbar .Navbar__img {
+    width: 145px;
+    height: 47px;
+  }
+  .Navbar .Navbar__side--link {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

@@ -4,6 +4,11 @@
   flex-direction: row;
   gap: 10px;
 }
+@media screen and (max-width: 426px) {
+  .tag {
+    margin: 20px;
+  }
+}
 .tag__content {
   display: flex;
   align-items: center;

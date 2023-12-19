@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (max-width: 426px) {
+  .container {
+    flex-direction: column;
+  }
+}
 
 .container2 {
   margin: 45px 100px;
@@ -10,6 +15,21 @@
   justify-content: center;
   gap: 10px;
 }
+@media screen and (max-width: 426px) {
+  .container2 {
+    flex-direction: column;
+    margin: 20px;
+  }
+}
 .container2__collapse {
   width: 100%;
+}
+
+@media screen and (max-width: 426px) {
+  .mobile-responsive {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px;
+  }
 }/*# sourceMappingURL=Logement.css.map */
