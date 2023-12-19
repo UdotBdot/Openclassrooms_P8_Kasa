@@ -21,11 +21,14 @@ function About() {
 			<Navbar />
       <BannerAbout />
 			{CollapseJson.map((rule, id) => (
-				<Collapse
+        <div className="about__container">
+        <Collapse
 					key={id}
 					collapseTitle={rule.collapseTitle}
 					collapseContent={rule.collapseContent}
-				/>
+				/>  
+        </div>
+				
 			))}
       <Footer />
 		</>

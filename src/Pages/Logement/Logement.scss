@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    &__collapse .equipments-container {
-        width: 580px ;
+    &__collapse  {
+        width: 100% ;
     }
 }
 

@@ -10,6 +10,6 @@
   justify-content: center;
   gap: 10px;
 }
-.container2__collapse .equipments-container {
-  width: 580px;
+.container2__collapse {
+  width: 100%;
 }/*# sourceMappingURL=Logement.css.map */

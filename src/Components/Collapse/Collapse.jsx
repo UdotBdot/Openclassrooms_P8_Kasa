@@ -6,7 +6,6 @@ function ListAbout(props) {
   return (
     <div className="accordion">
       <div className="accordion__container">
-        <div className="accordion__div">
           <input
             type="checkbox"
             name="accordion"
@@ -24,7 +23,6 @@ function ListAbout(props) {
           <div className="accordion__content">
             <p>{props.collapseContent}</p>
           </div>
-        </div>
       </div>
     </div>
   );

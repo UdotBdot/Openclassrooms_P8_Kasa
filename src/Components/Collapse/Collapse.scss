@@ -1,5 +1,9 @@
 @import "../../Styles/Utils/variables";
 
+.about__container {
+  margin: 0 100px;
+}
+
 .accordion {
   display: flex;
   justify-content: center;
@@ -8,7 +12,7 @@
     display: none;
   }
   &__container {
-    max-width: 1023px;
+    width: 100%;
     list-style-type: none;
   }
   &__title {
