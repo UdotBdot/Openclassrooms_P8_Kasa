@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import BannerAbout from "../../Components/BannerAbout/BannerAbout";
 import Footer from "../../Components/Footer/Footer";
-import AboutCollapse from "../../Components/AboutCollapse/AboutCollapse";
+import Collapse from "../../Components/Collapse/Collapse";
 import CollapseJson from "../../Datas/CollapseJson.json"
 
 function About() {
@@ -20,17 +20,13 @@ function About() {
 		<>
 			<Navbar />
       <BannerAbout />
-      <div className="accordion">
-        <ul className="accordion__ul">
 			{CollapseJson.map((rule, id) => (
-				<AboutCollapse
+				<Collapse
 					key={id}
 					collapseTitle={rule.collapseTitle}
 					collapseContent={rule.collapseContent}
 				/>
 			))}
-        </ul>
-      </div>
       <Footer />
 		</>
 	);

@@ -3,3 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.container2 {
+    margin: 45px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    &__collapse .equipments-container {
+        width: 580px ;
+    }
+}
+

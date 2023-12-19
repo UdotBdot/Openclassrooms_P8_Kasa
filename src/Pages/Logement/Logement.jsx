@@ -8,7 +8,7 @@ import Title from "../../Components/Title/Title";
 import Tags from "../../Components/Tags/Tags";
 import Host from "../../Components/Host/Host";
 import Rate from "../../Components/Rate/Rate";
-import AboutCollapse from "../../Components/AboutCollapse/AboutCollapse";
+import Collapse from "../../Components/Collapse/Collapse";
 import Flat from "../../Datas/Flat.json";
 
 function Logement() {
@@ -42,20 +42,31 @@ function Logement() {
           <Rate flatId={flatId} />
         </div>
       </div>
-      <div className="accordion">
-        <ul className="accordion__ul">
+
+      <div className="container2">
+        <div className="container2__collapse">
           {/* Onglet "Description" */}
-          <AboutCollapse
+          <Collapse
             collapseTitle="Description"
             collapseContent={flatData.description}
           />
+        </div>
+
+        <div className="container2__collapse">
           {/* Onglet "Equipements" */}
-          <AboutCollapse
+          <Collapse
             collapseTitle="Equipements"
-            collapseContent={flatData.equipments.join(" ")}
+            collapseContent={
+              <div className="equipments-container">
+                {flatData.equipments.map((equipment, index) => (
+                  <p key={index}>{equipment}</p>
+                ))}
+              </div>
+            }
           />
-        </ul>
+        </div>
       </div>
+
       <Footer />
     </div>
   );
