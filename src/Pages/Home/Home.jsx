@@ -1,15 +1,17 @@
+// Home.js
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import BannerHome from "../../Components/BannerHome/BannerHome";
+import Banner from "../../Components/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
 import Gallery from "../../Components/Gallery/Gallery";
 import Flat from "../../Datas/Flat.json";
+import Banners from "../../Datas/Banners.json";
 
-function About() {
+function Home() {
   return (
     <div>
       <Navbar />
-      <BannerHome />
+      <Banner banners={Banners} />
       <div className="gallery">
         {Flat.map((flat) => (
           <Gallery
@@ -25,4 +27,4 @@ function About() {
   );
 }
 
-export default About;
+export default Home;

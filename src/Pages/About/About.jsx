@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import BannerAbout from "../../Components/BannerAbout/BannerAbout";
+import Banner from "../../Components/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
 import Collapse from "../../Components/Collapse/Collapse";
-import CollapseJson from "../../Datas/CollapseJson.json"
+import CollapseJson from "../../Datas/CollapseJson.json";
+import Banners from "../../Datas/Banners.json";
 
 function About() {
   useEffect(() => {
@@ -16,23 +17,22 @@ function About() {
       });
     });
   }, []);
+
   return (
-		<>
-			<Navbar />
-      <BannerAbout />
-			{CollapseJson.map((rule, id) => (
-        <div className="about__container">
-        <Collapse
-					key={id}
-					collapseTitle={rule.collapseTitle}
-					collapseContent={rule.collapseContent}
-				/>  
+    <>
+      <Navbar />
+      <Banner banners={[Banners[1]]} />
+      {CollapseJson.map((rule, id) => (
+        <div className="about__container" key={id}>
+          <Collapse
+            collapseTitle={rule.collapseTitle}
+            collapseContent={rule.collapseContent}
+          />
         </div>
-				
-			))}
+      ))}
       <Footer />
-		</>
-	);
+    </>
+  );
 }
 
 export default About;

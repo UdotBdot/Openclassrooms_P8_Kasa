@@ -1,0 +1,10 @@
+[
+    {
+        "bannerImg": "./Images/image source 1.png",
+        "bannerContent":"Chez vous, partout et ailleurs"
+
+    },
+    {
+        "bannerImg":"./Images/image source 2.png"
+    }
+]
