@@ -4,7 +4,7 @@ import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Error from "./Pages/Error/Error";
 import Logement from "./Pages/Logement/Logement";
-import "./Styles/main.css";
+import "./Styles/main.scss";
 
 
 function App() {
