@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-function ListAbout(props) {
+function Collapse(props) {
   return (
     <div className="accordion">
       <div className="accordion__container">
@@ -21,10 +21,10 @@ function ListAbout(props) {
             />
           </div>
           <div className="accordion__content">
-            <p>{props.collapseContent}</p>
+           {props.collapseContent}
           </div>
       </div>
     </div>
   );
 }
-export default ListAbout;
+export default Collapse;

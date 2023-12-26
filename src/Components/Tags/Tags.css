@@ -1,0 +1,22 @@
+.tag {
+  margin: 0 100px 45px 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media screen and (max-width: 426px) {
+  .tag {
+    margin: 20px;
+  }
+}
+.tag__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF6060;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px 15px;
+  cursor: pointer;
+}/*# sourceMappingURL=Tags.css.map */
