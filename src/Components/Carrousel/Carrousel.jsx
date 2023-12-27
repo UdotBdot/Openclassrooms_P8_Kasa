@@ -15,6 +15,14 @@ function Carrousel({ flatId }) {
 
   const totalPictures = flat.pictures.length;
 
+  if (totalPictures === 1) {
+    return (
+      <div className="carrousel">
+        <img src={flat.pictures[0]} alt={`${flat.title} - 1`} className="carrousel__img" />
+      </div>
+    );
+  }
+
   const goToPrevious = () => {
     setCurrentIndex(prevIndex => (prevIndex > 2 ? prevIndex - 1 : totalPictures));
   };

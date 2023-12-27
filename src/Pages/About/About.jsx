@@ -19,19 +19,21 @@ function About() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Banner banners={[Banners[1]]} />
-      {CollapseJson.map((rule, id) => (
-        <div className="about__container" key={id}>
-          <Collapse
-            collapseTitle={rule.collapseTitle}
-            collapseContent={rule.collapseContent}
-          />
-        </div>
-      ))}
-      <Footer />
-    </>
+    <main>
+        <Navbar />
+        <Banner banners={[Banners[1]]} />
+      <section className="about">
+        {CollapseJson.map((rule, id) => (
+          <article className="about__container" key={id}>
+            <Collapse
+              collapseTitle={rule.collapseTitle}
+              collapseContent={rule.collapseContent}
+            />
+          </article>
+        ))}
+      </section>
+        <Footer />
+    </main>
   );
 }
 

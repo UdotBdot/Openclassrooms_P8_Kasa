@@ -5,11 +5,11 @@ import ErrorPage from "../../Components/ErrorPage/ErrorPage";
 
 function About() {
   return (
-    <div>
+    <main>
       <Navbar />
       <ErrorPage />
       <Footer />
-    </div>
+    </main>
   )
 }
 

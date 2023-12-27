@@ -4,7 +4,7 @@ function Banner({ banners }) {
   const firstBanner = banners[0];
 
   return (
-    <div className="Banner">
+    <section className="Banner">
       <img
         key={firstBanner.key}
         className="Banner__img"
@@ -14,7 +14,7 @@ function Banner({ banners }) {
       <div className="Banner__text">
         {firstBanner.bannerContent && <p>{firstBanner.bannerContent}</p>}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -12,6 +12,9 @@
         font-size: 288px;
         margin: 10px 0;
         color: $primary-color;
+        @media screen and (max-width: 426px) {
+            font-size: 165px;
+        }
     }
     &__content {
         font-size: 36px;

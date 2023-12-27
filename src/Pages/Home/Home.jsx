@@ -1,4 +1,3 @@
-// Home.js
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Banner from "../../Components/Banner/Banner";
@@ -9,10 +8,10 @@ import Banners from "../../Datas/Banners.json";
 
 function Home() {
   return (
-    <div>
-      <Navbar />
-      <Banner banners={Banners} />
-      <div className="gallery">
+    <main>
+        <Navbar />
+        <Banner banners={Banners} />
+      <section className="gallery">
         {Flat.map((flat) => (
           <Gallery
             key={flat.id}
@@ -21,9 +20,9 @@ function Home() {
             pictures={flat.pictures}
           />
         ))}
-      </div>
-      <Footer />
-    </div>
+      </section>
+        <Footer />
+    </main>
   );
 }
 

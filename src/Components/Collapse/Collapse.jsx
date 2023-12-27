@@ -2,29 +2,32 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-function Collapse(props) {
+function Collapse({ collapseTitle, collapseContent }) {
+  const accordionId = `accordion-${collapseTitle}`;
+
   return (
-    <div className="accordion">
+    <section className="accordion">
       <div className="accordion__container">
-          <input
-            type="checkbox"
-            name="accordion"
-            id={`accordion-${props.collapseTitle}`}
+        <input
+          type="checkbox"
+          name="accordion"
+          id={accordionId}
+        />
+        <div className="accordion__title">
+          <label htmlFor={accordionId}>
+            {collapseTitle}
+          </label>
+          <FontAwesomeIcon
+            icon={faChevronUp}
+            className="accordion__icon"
           />
-          <div className="accordion__title">
-            <label htmlFor={`accordion-${props.collapseTitle}`}>
-              {props.collapseTitle}
-            </label>
-            <FontAwesomeIcon
-              icon={faChevronUp}
-              className="accordion__icon"
-            />
-          </div>
-          <div className="accordion__content">
-           {props.collapseContent}
-          </div>
+        </div>
+        <div className="accordion__content">
+          {collapseContent}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
+
 export default Collapse;

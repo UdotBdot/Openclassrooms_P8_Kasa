@@ -1,25 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="Navbar">
-      <Link to="/">
+    <header className="Navbar">
+      <NavLink to="/">
       <img
         src="../images/LOGO.PNG"
         alt="LOGO KASA"
         className="Navbar__img"
       ></img>
-      </Link>
+      </NavLink>
       <div className="Navbar__side">
         <div className="Navbar__side--link">
-          <Link to="/">Accueil</Link>
+          <NavLink to="/">Accueil</NavLink>
         </div>
         <div className="Navbar__side--link">
-          <Link to="/about">A Propos</Link>
+          <NavLink to="/about">A Propos</NavLink>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 
