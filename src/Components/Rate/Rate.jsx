@@ -1,11 +1,8 @@
 import React from 'react';
-import Flat from '../../Datas/Flat.json';
 import emptyStar from "../../Svg/empty-star.svg";
 import fullStar from "../../Svg/full-star.svg";
 
-function Rate({ flatId }) {
-    const flat = Flat.find(item => item.id === flatId);
-    
+function Rate({ rating }) {
     const generateStars = (rating) => {
         return Array.from({ length: 5 }, (_, index) => (
             <img
@@ -18,7 +15,7 @@ function Rate({ flatId }) {
 
     return (
         <div className="rating">
-                {generateStars(flat.rating)}
+            {generateStars(rating)}
         </div>
     );
 }

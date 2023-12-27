@@ -1,6 +1,7 @@
 .host {
     display: flex;
-    margin: 45px 100px 10px 100px;
+    width: 150px;
+    padding: 0px 4px;
     @media screen and (max-width: 426px) {
         margin: 0px;
       }

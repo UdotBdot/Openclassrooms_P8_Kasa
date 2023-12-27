@@ -8,11 +8,9 @@ import Tags from "../../Components/Tags/Tags";
 import Host from "../../Components/Host/Host";
 import Rate from "../../Components/Rate/Rate";
 import Collapse from "../../Components/Collapse/Collapse";
-import Flat from "../../Datas/Flat.json";
 import Error from "../../Pages/Error/Error";
 
-
-function Logement() {
+function Logement({ flats }) {
   const { flatId } = useParams();
   const navigate = useNavigate();
 
@@ -27,8 +25,8 @@ function Logement() {
     });
   }, []);
 
-  // Trouver le logement correspondant à l'ID dans Flat.json
-  const flatData = Flat.find((flat) => flat.id === flatId);
+  // Trouver le logement correspondant à l'ID dans les données transmises en tant que prop
+  const flatData = flats.find((flat) => flat.id === flatId);
 
   if (!flatData) {
     // Si l'ID ne correspond à aucun logement, rediriger vers la page 404
@@ -40,15 +38,15 @@ function Logement() {
     <main>
       <Navbar />
       <section>
-        <Carrousel flatId={flatId} />
+        <Carrousel images={flatData.pictures} />
         <div className="container">
           <div>
-            <Title flatId={flatId} />
-            <Tags flatId={flatId} />
+          <Title title={flatData.title} location={flatData.location} />
+            <Tags tags={flatData.tags} />
           </div>
           <div className="mobile-responsive">
-            <Host flatId={flatId} />
-            <Rate flatId={flatId} />
+            <Host host={flatData.host} /> 
+            <Rate rating={flatData.rating} />
           </div>
         </div>
       </section>

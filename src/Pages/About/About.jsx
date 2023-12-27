@@ -22,7 +22,7 @@ function About() {
     <main>
         <Navbar />
         <Banner banners={[Banners[1]]} />
-      <section className="about">
+      <section className="about about--1">
         {CollapseJson.map((rule, id) => (
           <article className="about__container" key={id}>
             <Collapse

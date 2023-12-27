@@ -1,6 +1,9 @@
 @import "../../Styles/Utils/variables";
 @import "../../Styles/Utils/mixins";
-
+.about--1 {
+  max-width: 80%;
+  margin: 0 auto;
+}
 .about__container {
   margin: 0 100px;
   @media screen and (max-width: 426px) {

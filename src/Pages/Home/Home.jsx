@@ -2,26 +2,25 @@ import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Banner from "../../Components/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
-import Gallery from "../../Components/Gallery/Gallery";
-import Flat from "../../Datas/Flat.json";
+import Card from "../../Components/Card/Card";
 import Banners from "../../Datas/Banners.json";
 
-function Home() {
+function Home({ flats }) {
   return (
     <main>
-        <Navbar />
-        <Banner banners={Banners} />
+      <Navbar />
+      <Banner banners={Banners} />
       <section className="gallery">
-        {Flat.map((flat) => (
-          <Gallery
+        {flats.map((flat) => (
+          <Card
             key={flat.id}
             id={flat.id}
             title={flat.title}
-            pictures={flat.pictures}
+            cover={flat.cover} 
           />
         ))}
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }
